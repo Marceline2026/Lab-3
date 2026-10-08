@@ -1,0 +1,29 @@
+import math
+
+def Grade(score):
+    if 0 <= score <= 59: #the first check if its more than 59 than it moves on
+        print("F")
+    elif 60 <= score <= 69: #the elif  is just a else if statement just spelled differently  
+        print("D")
+    elif 70 <= score <= 79:
+        print("C")
+    elif 80 <= score <= 89:
+        print("B")
+    elif 90 <= score <= 100:
+        print("A")
+    else:       #if the score is not 1-100 it will print not valid score
+        print("Invalid score. Please enter a number from 0 to 100.")
+
+score = int(input("Put your score: "))
+Grade(score)
+
+def lab3(sentence):
+    sentence_without_spaces = "" #this will be the final string that gets printed without spaces
+    for character in sentence:
+        if character != " ":  #it shows if the character is not a space it gets added
+            sentence_without_spaces += character
+
+    return sentence_without_spaces
+
+sentence = input("Enter a sentence: ")
+print(lab3(sentence))
